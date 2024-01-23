@@ -11,7 +11,7 @@ admin_panel = ReplyKeyboardMarkup(resize_keyboard=True)
 admin_panel.add('Добавить товар').add('Удалить товар').add('Сделать рассылку')
 
 catalog_list = InlineKeyboardMarkup(row_width=2)
-catalog_list.add(InlineKeyboardButton('Geely'),
-                 InlineKeyboardButton('Chery'),
-                 InlineKeyboardButton('Changan'),
+catalog_list.add(InlineKeyboardButton('Geely', callback_data = 'geely'),
+                 InlineKeyboardButton('Chery', callback_data = 'chery'),
+                 InlineKeyboardButton('Changan', callback_data= 'changan'),
                  )
