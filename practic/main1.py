@@ -1,26 +1,10 @@
 from aiogram import Bot, Dispatcher, executor, types
-from aiogram.types import ReplyKeyboardMarkup, InlineKeyboardMarkup, InlineKeyboardButton
 from dotenv import load_dotenv
 import os
 
 load_dotenv()
 bot = Bot(os.getenv('TOKEN'))
 dp = Dispatcher(bot=bot)
-
-main = ReplyKeyboardMarkup(resize_keyboard=True)
-main.add('Каталог').add('Корзина').add('Контакты')
-
-main_admin = ReplyKeyboardMarkup(resize_keyboard=True)
-main_admin.add('Каталог').add('Корзина').add('Контакты').add('Admin-панель')
-
-admin_panel = ReplyKeyboardMarkup(resize_keyboard=True)
-admin_panel.add('Добавить товар').add('Удалить товар').add('Сделать рассылку')
-
-catalog_list = InlineKeyboardMarkup(row_width=2)
-catalog_list.add(InlineKeyboardButton('Geely'),
-                 InlineKeyboardButton('Chery'),
-                 InlineKeyboardButton('Changan'),
-                 )
 
 @dp.message_handler(commands=['start'])
 async def cmd_start(message: types.Message):
