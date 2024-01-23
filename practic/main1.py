@@ -29,9 +29,9 @@ async def cmd_start(message: types.Message):
     if message.from_user.id == int(os.getenv('ADMIN_ID')):
         await message.answer(f'Вы авторизовались как администратор!', reply_markup=main_admin)
 
-@dp.message_handler(commands=['id'])
-async def cmd_id(message: types.Message):
-    await message.answer(f'{message.from_user.id}')
+# @dp.message_handler(commands=['id'])
+# async def cmd_id(message: types.Message):
+#     await message.answer(f'{message.from_user.id}')
 
 @dp.message_handler(text='Admin-панель')
 async def admin(message: types.Message):
