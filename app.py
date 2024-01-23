@@ -4,11 +4,11 @@ async def on_startup(dp):
 	
 	from utils.set_bot_commands import set_default_commands
 	await set_default_commands(dp)
-	
+
 	print("bot started")
 
 if __name__ == "__main__":
 	from aiogram import executor
-	from handlers import dp
+	from loader import dp# Change: handlers > loader
 	
 	executor.start_polling(dp, on_startup=on_startup, skip_updates=True)#skip_updates=True With this thing messages don't send more times
