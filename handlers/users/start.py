@@ -2,7 +2,7 @@
 from aiogram import types
 from loader import dp
 from keyboards import main_admin, main
-from config import admins_id
+from data.config import admins_id
 
 # FSM start on command /offer
 @dp.message_handler(text="/start")

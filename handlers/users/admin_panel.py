@@ -2,7 +2,7 @@
 from aiogram import types
 from loader import dp
 from keyboards import admin_panel
-from config import admins_id
+from data.config import admins_id
 
 @dp.message_handler(text='Admin-панель')
 async def admin(message: types.Message):

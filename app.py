@@ -8,7 +8,7 @@ async def on_startup(dp):
 	print("bot started")
 
 if __name__ == "__main__":
-	from aiogram import executor
+	from aiogram import dispatcher
 	from handlers import dp
 	
-	executor.start_polling(dp, on_startup=on_startup)
+	dispatcher.start_polling(dp, on_startup=on_startup)
